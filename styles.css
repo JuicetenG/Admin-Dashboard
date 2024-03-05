@@ -80,20 +80,35 @@ ul {
 
 .dashboard-display {
   display: grid;
-  grid-template-columns: minmax(min-content, 3fr) minmax(300px, 1fr);
+  grid-template-columns: 3fr minmax(300px, 1fr);
   grid-column: 2;
   background-color: lightgreen;
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column: 1;
   gap: 30px;
-  grid-row: span 2;
   padding: 20px;
+  align-content: start;
 }
 
 .card {
   border: 1px solid black;
-  padding: 20px
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  max-height: 275px;
+}
+
+.announcements, .trending {
+  border: 1px solid black;
+}
+
+.side-section {
+  display: grid;
+  grid-template-rows: 400px 400px;
+  padding: 20px;
+  gap: 30px
 }
