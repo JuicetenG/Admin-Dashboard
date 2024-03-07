@@ -7,7 +7,7 @@
 .container {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 180px 4fr;
   height: 100vh;
 }
 
@@ -17,44 +17,41 @@
 
 header {
   display: grid;
-  grid-template-columns: 2fr 1fr; 
+  grid-template-columns: 1.75fr 1.25fr;
+  grid-template-rows: 4fr 6fr; 
+  row-gap: 20px;
   grid-column: 2;
   box-sizing: border-box;
 }
-
-.header-top {
-  grid-column: span 2;
+.search-bar-container {
+  align-self: end;
+  padding-left: 40px;
 }
-
-.header-top-1 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-column: 1;
-}
-
-.header-top-2 {
+.header-top-right {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-column: 2;
+  justify-content: end;
+  align-content: end;
+  padding-left: 40px;
+}
+
+.header-bottom-left { 
+  display: grid;
+  grid-template-columns: 125px 125px;
+  align-content: center;
+  padding-left: 40px;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  align-content: center;
   justify-content: end;
 }
 
-.header-bottom {
-  display: grid;
-  grid-column: span 2;
-}
-
-.header-bottom-1 {
-  display: grid;
-  grid-template-columns: 75px 75px;
-  grid-column: 1;
-}
-
-.header-bottom-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 125px);
-  grid-column: 2;
-  justify-content: end;
+button {
+  height: 30px;
+  width: 75px;
 }
 
 /*/////////
